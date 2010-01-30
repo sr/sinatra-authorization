@@ -1,15 +1,4 @@
 module Sinatra
-  # HTTP Authorization helpers for Sinatra.
-  #
-  # In your helpers module, include Sinatra::Authorization and then define
-  # an #authorize(user, password) method to handle user provided
-  # credentials.
-  #
-  # Inside your events, call #login_required to trigger the HTTP
-  # Authorization window to pop up in the browser.
-  #
-  # Code adapted from {Ryan Tomayko}[http://tomayko.com/about] and
-  # {Christopher Schneid}[http://gittr.com], shared under an MIT License
   module Authorization
     # Redefine this method on your helpers block to actually contain
     # your authorization logic.
