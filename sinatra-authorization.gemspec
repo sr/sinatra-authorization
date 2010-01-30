@@ -1,6 +1,5 @@
 Gem::Specification.new do |s|
   s.name     = "sinatra-authorization"
-  s.rubyforge_project = "integrity"
   s.version  = "1.0.0"
   s.date     = "2009-04-19"
   s.summary  = "HTTP Authorization helpers for Sinatra."
