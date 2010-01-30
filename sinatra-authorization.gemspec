@@ -10,7 +10,8 @@ Gem::Specification.new do |s|
   s.authors  = ["Nicolás Sanguinetti", "Simon Rozet"]
   s.has_rdoc = false
   s.files    = %w[
-README.rdoc
+README
+COPYING
 Rakefile
 sinatra-authorization.gemspec
 lib/sinatra/authorization.rb
