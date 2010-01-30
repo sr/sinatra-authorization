@@ -18,18 +18,18 @@ module Sinatra
       unauthorized! unless auth.provided?
       bad_request!  unless auth.basic?
       unauthorized! unless authorize(*auth.credentials)
-      request.env['REMOTE_USER'] = auth.username
+      request.env["REMOTE_USER"] = auth.username
     end
 
     # Convenience method to determine if a user is logged in
     def authorized?
-      !!request.env['REMOTE_USER']
+      !!request.env["REMOTE_USER"]
     end
     alias_method :logged_in?, :authorized?
 
     # Name provided by the current user to log in
     def current_user
-      request.env['REMOTE_USER']
+      request.env["REMOTE_USER"]
     end
 
     private
@@ -39,11 +39,11 @@ module Sinatra
 
       def unauthorized!(realm=authorization_realm)
         response["WWW-Authenticate"] = %(Basic realm="#{realm}")
-        throw :halt, [ 401, 'Authorization Required' ]
+        throw :halt, [401, "Authorization Required"]
       end
 
       def bad_request!
-        throw :halt, [ 400, 'Bad Request' ]
+        throw :halt, [400, "Bad Request"]
       end
   end
 
