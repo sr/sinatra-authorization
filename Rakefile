@@ -2,7 +2,7 @@ task :default => :test
 
 desc "Run tests"
 task :test do
-  ruby "test/authorization_test.rb"
+  sh "ruby -Ilib test/authorization_test.rb"
 end
 
 begin

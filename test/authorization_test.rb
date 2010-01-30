@@ -1,7 +1,6 @@
 require "test/unit"
 require "rack/test"
-
-require File.dirname(__FILE__) + "/../lib/sinatra/authorization"
+require "sinatra/authorization"
 
 class AuthorizationApp < Sinatra::Default
   set :environment, :test
