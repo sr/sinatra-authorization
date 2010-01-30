@@ -6,7 +6,8 @@ Gem::Specification.new do |s|
   s.description  = "HTTP Authorization helpers for Sinatra."
   s.homepage = "http://github.com/integrity/sinatra-authorization"
   s.email    = "info@integrityapp.com"
-  s.authors  = ["Nicolás Sanguinetti", "Simon Rozet"]
+  s.authors  = ["Nicolás Sanguinetti", "Simon Rozet", "Ryan Tomayko",
+    "Christopher Schneid"]
   s.has_rdoc = false
   s.files    = %w[
 README
