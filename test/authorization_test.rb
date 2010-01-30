@@ -1,5 +1,6 @@
 require "test/unit"
 require "rack/test"
+require "sinatra/base"
 require "sinatra/authorization"
 
 class AuthorizationApp < Sinatra::Default
