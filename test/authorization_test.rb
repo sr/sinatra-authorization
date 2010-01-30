@@ -4,6 +4,7 @@ require "sinatra/base"
 require "sinatra/authorization"
 
 class AuthorizationApp < Sinatra::Base
+  helpers Sinatra::Authorization
   set :environment, :test
 
   get "/" do
