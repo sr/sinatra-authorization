@@ -3,7 +3,7 @@ require "rack/test"
 require "sinatra/base"
 require "sinatra/authorization"
 
-class AuthorizationApp < Sinatra::Default
+class AuthorizationApp < Sinatra::Base
   set :environment, :test
 
   get "/" do
