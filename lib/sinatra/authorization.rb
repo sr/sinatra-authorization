@@ -25,7 +25,7 @@ module Sinatra
     def authorized?
       !!request.env['REMOTE_USER']
     end
-    alias :logged_in? :authorized?
+    alias_method :logged_in?, :authorized?
 
     # Name provided by the current user to log in
     def current_user
