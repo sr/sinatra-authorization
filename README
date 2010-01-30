@@ -1,0 +1,23 @@
+        Sinatra Authorization -- HTTP Authorization helpers for Sinatra
+
+USAGE
+
+  require "sinatra/authorization"
+
+  set :authorization_realm, "Protected zone"
+
+  helpers do
+    def authorize(login, password)
+      login == "admin" && password == "secret"
+    end
+  end
+
+  get "/" do
+    "Hello"
+  end
+
+  get "/admin" do
+    login_required
+
+    "Welcome in protected zone"
+  end
