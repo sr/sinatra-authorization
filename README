@@ -21,3 +21,9 @@ USAGE
 
     "Welcome in protected zone"
   end
+
+TESTS
+
+  gem install bundler
+  gem bundle
+  ./bin/rake
