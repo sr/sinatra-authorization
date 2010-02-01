@@ -6,6 +6,7 @@ require "sinatra/authorization"
 class AuthorizationApp < Sinatra::Base
   helpers Sinatra::Authorization
   set :environment, :test
+  set :authorization_realm, "Move on"
 
   get "/" do
     login_required
@@ -15,10 +16,6 @@ class AuthorizationApp < Sinatra::Base
 
   def authorize(username, password)
     username == "user" && password = "test"
-  end
-
-  def authorization_realm
-    "Move on"
   end
 end
 
